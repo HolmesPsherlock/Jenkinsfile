@@ -1,4 +1,4 @@
-Jenkinsfile (Declarative Pipeline)
+
 pipeline {
     agent { docker 'maven:3.3.3' }
     stages {
@@ -10,7 +10,7 @@ pipeline {
     }
 }
 
-Jenkinsfile (Declarative Pipeline)
+
 pipeline {
     agent { docker 'node:6.3' }
     stages {
@@ -22,7 +22,7 @@ pipeline {
     }
 }
 
-Jenkinsfile (Declarative Pipeline)
+
 pipeline {
     agent { docker 'ruby' }
     stages {
@@ -34,7 +34,7 @@ pipeline {
     }
 }
 
-Jenkinsfile (Declarative Pipeline)
+
 pipeline {
     agent { docker 'python:3.5.1' }
     stages {
@@ -46,7 +46,7 @@ pipeline {
     }
 }
 
-Jenkinsfile (Declarative Pipeline)
+
 pipeline {
     agent { docker 'php' }
     stages {
