@@ -1,58 +1,20 @@
-
 pipeline {
-    agent { docker 'maven:3.3.3' }
+    agent any
+
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                sh 'mvn --version'
+                echo 'Building..'
             }
         }
-    }
-}
-
-
-pipeline {
-    agent { docker 'node:6.3' }
-    stages {
-        stage('build') {
+        stage('Test') {
             steps {
-                sh 'npm --version'
+                echo 'Testing..'
             }
         }
-    }
-}
-
-
-pipeline {
-    agent { docker 'ruby' }
-    stages {
-        stage('build') {
+        stage('Deploy') {
             steps {
-                sh 'ruby --version'
-            }
-        }
-    }
-}
-
-
-pipeline {
-    agent { docker 'python:3.5.1' }
-    stages {
-        stage('build') {
-            steps {
-                sh 'python --version'
-            }
-        }
-    }
-}
-
-
-pipeline {
-    agent { docker 'php' }
-    stages {
-        stage('build') {
-            steps {
-                sh 'php --version'
+                echo 'Deploying....'
             }
         }
     }
